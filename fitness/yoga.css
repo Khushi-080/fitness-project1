@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background: #257465;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.posture {
+    background: rgb(94, 94, 94);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4bff81;
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Add border radius for a softer look */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+  }
+  .about-img img{
+    width:2500px;
+    border:2px solid var(--text-color);
+    border-radius: 16px;
+    transition:0.5s ease;
+    display: flex;
+    margin-left: 20px;
+  }
+  .about-img img:hover{
+    transform:scale(1.02);
+    border:2px solid var(--main-color);
+
+  }
+  about-content.heading{
+    text-align:center;
+    font-size:70px;
+
+  }
+  .about-content{
+    padding: 0 100px;
+  }
+  .about-content h2{
+    text-align:left;
+    line-height:1.2;
+
+  }
+  .about-content p{
+    margin: 20px 10px 3px;
+    color: aliceblue;
+    font-size: 16px;
+  }
+  .about-content a{
+    font-size:16.5px;
+    margin: 3px 0 40px;
+    text-align:center;
+  }
+  .footer{
+    padding:50px 15% 10px;
+    border-top:5px solid #333;
+    color:#777; 
+  }
+  .row1{
+    display: flex;
+    background:var(--bg-color);
+    border-radius: 27px;
+    border: 1px solid transparent; 
+    padding:20px;
+    transition:all 0.5s ease;
+    margin-top: 50px;
+  }
+  .footer h2{
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:30px;
+  }
+  .footer .col{
+    flex-basis:25%;
+    margin-bottom:2px;
+  }
+  .footer .col a{
+    display:block;
+    text-decoration:none;
+    color:#777;
+    font-size: 17px;
+    margin-bottom:10px;
+  }
+  .footer .row{
+    display: flex;
+  }

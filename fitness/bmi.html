@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><center>BMI Calculator</center></title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div class="maindiv"> 
+        <div class="container">
+            <h1><center>BMI Calculator</center></h1>
+            <form>
+                <p><label for="h">Body Height (in cm) : </label><input type="number" id="h" required><br></p>
+                <p><label for="w">Body Weight (in kg) : </label><input type="number" id="w" required><br></p>
+                
+                <button type="submit" id="s">Calculate BMI</button><br><br>
+                <div class="result-box">
+                    <h2>Result : </h2>
+                    <div id="results"></div>
+                </div>
+                <div id="bmi"></div>
+                <div id="result"></div>
+                <div id="weight-guide"><br>
+                
+                    <h4># BMI Weight Guide</h4>
+                    <p>1. Under-Weight = Less Than 18.6</p>
+                    <p>2. Normal-Weight =  Between 18.6 and 24.9</p>
+                    <p>3. Over-Weight = More than 24.9</p>
+                </div>
+            </form>
+            <script>
+                document.getElementById('s').addEventListener('click', myfun);
+                function myfun(e){
+                  var w = document.getElementById('w').value;
+                  var h = document.getElementById('h').value;
+                  var bmi = w/(h/100 * h/100);
+                  document.getElementById('bmi').innerHTML = bmi.toFixed(2);
+                    if(w>=1 && h>=1){
+                    e.preventDefault();
+                    if(bmi >= 18.5 && bmi <=24.9){
+                            document.getElementById('result').innerHTML = "Result : Normal-Weight";
+                        }
+                        if(bmi <= 18.4){
+                            document.getElementById('result').innerHTML = "Result : Under-Weight";
+                        }
+                        if(bmi >= 25) {
+                            document.getElementById('result').innerHTML = "Result : Over-Weight";
+                        }
+                }
+                else{
+                document.getElementById('bmi').innerHTML ="";
+                document.getElementById('result').innerHTML = "";
+                }
+            }
+            </script>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
